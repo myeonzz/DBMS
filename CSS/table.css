@@ -1,0 +1,86 @@
+table {
+    width: 70%;
+    border-collapse:separate;
+    border-spacing: 10px; 
+    border-radius: 10px;
+    margin: 25px 0;
+    font-family: 'Arial', sans-serif;
+box-shadow:  11px 11px 22px #bebebe,
+             -11px -11px 22px #ffffff;
+    overflow: hidden;
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th,table td {
+    padding: 12px 15px;
+}
+
+.tableheader {
+    background-color: #1E88E5 !important;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+td:nth-child(1) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+tr:nth-of-type(even) td:nth-child(1) {
+    background-color: #4a7797 ; 
+    color: #ffffff;
+}
+
+tr:nth-of-type(odd) td:nth-child(1) {
+    background-color: #3c7096 ; 
+    color: #ffffff;
+}
+
+ tr:nth-of-type(odd) {
+    background-color: #c8d7e2 ;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #E3F2FD ;
+}
+
+.delbutt{
+    background-color: crimson;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20%;
+    transition: background-color 0.3s;
+}
+.delbutt:hover{
+    animation: ease-out 0.5s;
+    background-color: rgb(110, 10, 30);
+}
+
+.editbutt{
+    background-color: #1E88E5 ;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.editbutt:hover{
+    animation: ease-out 0.5s;
+    background-color: rgb(10, 30, 110);
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
