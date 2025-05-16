@@ -2,16 +2,16 @@
 
 $conn=mysqli_connect("localhost","root","","student");
 $studentnum=$_POST['studentnum'];
-$fName=$_POST['fName'];
-$lName=$_POST['lName'];
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
 $course=$_POST['course'];
 $email=$_POST['email'];
 $bday=$_POST['bday'];
 
 mysqli_query($conn, "insert into student values(
     '$studentnum',
-    '$fName',
-    '$lName',
+    '$fname',
+    '$lname',
     '$course',
     '$email',
     '$bday'

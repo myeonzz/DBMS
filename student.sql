@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2025 at 04:28 PM
+-- Generation Time: May 16, 2025 at 05:34 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -31,7 +31,9 @@ CREATE TABLE `student` (
   `studentnum` varchar(9) NOT NULL,
   `fname` varchar(100) NOT NULL,
   `lname` varchar(100) NOT NULL,
-  `course` varchar(10) NOT NULL
+  `course` varchar(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `bday` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

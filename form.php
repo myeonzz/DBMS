@@ -11,10 +11,10 @@
                 <input type="text" name="studentnum"><br>
 
                 <label>First Name</label>
-                <input type="text" name="fName"><br>
+                <input type="text" name="fname"><br>
 
                 <label>Last Name</label>
-                <input type="text" name="lName"><br>
+                <input type="text" name="lname"><br>
 
                 <label>Course</label>
                 <input type="text" name="course"><br>
