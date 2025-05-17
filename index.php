@@ -2,6 +2,7 @@
 <head>
     <title>Student Record</title>
     <link rel="stylesheet" href="CSS/table.css">
+    <script src="JScript/modal.js"></script>
 </head>
 <style>
     @font-face {
@@ -13,6 +14,7 @@
     font-family: 'Roboto', sans-serif;
 }
 </style>
+
 <?php $conn = mysqli_connect("localhost", "root", "", "student"); ?>
 <body>
     <center>
@@ -39,8 +41,16 @@
                 <td><?php echo $row['course']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['bday']; ?></td>
-                <td align="center"><a class="editbutt" href="edit.php? studentnum=<?php echo
-                $row['studentnum'];?>">Edit</a></td>
+                <td align="center">
+                    <button class="editbutt" onclick="openEditModal(
+                        '<?php echo $row['studentnum']; ?>',
+                        '<?php echo $row['fname']; ?>',
+                        '<?php echo $row['lname']; ?>',
+                        '<?php echo $row['course']; ?>',
+                        '<?php echo $row['email']; ?>',
+                        '<?php echo $row['bday']; ?>'
+                    )">Edit</button>
+                </td>
                 <td align="center"><a class="delbutt" href="delete.php? studentnum=<?php echo 
                 $row['studentnum'];?>" onclick="return confirm('Are you sure sure you want to delete this record?');">X</a></td>
             </tr>
@@ -49,5 +59,42 @@
     ?>
     </table>
     </center>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Student Record</h2>
+            <form id="editForm" action="edit.php" method="post">
+                <input type="hidden" name="studentnum" id="modalStudentNum">
+                
+                <div class="form-group">
+                    <label for="modalFname">First Name:</label>
+                    <input type="text" id="modalFname" name="fname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalLname">Last Name:</label>
+                    <input type="text" id="modalLname" name="lname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalCourse">Course:</label>
+                    <input type="text" id="modalCourse" name="course" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalEmail">Email:</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalBday">Birthdate:</label>
+                    <input type="date" id="modalBday" name="bday" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
