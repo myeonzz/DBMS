@@ -3,10 +3,12 @@ body {
     margin: 0 auto;
     margin-top:  60px ;
 }
-
+section{
+    width: 80%;
+}
 table {
+    width: 100%;
     margin-top: -50px;
-    width: 67%;
     border-collapse:separate;
     border-radius: 10px;
     font-family: 'Arial', sans-serif;
@@ -25,15 +27,13 @@ table {
 
 }
 
-
-.header {
-
+.header{
     display: flex;
     justify-content: center; 
     align-items: center;    
     align-content: center;
     flex-direction: row-reverse;
-    width: 66%;
+    width: 100%;
     gap: 5px;
 
   }
@@ -95,10 +95,9 @@ table tbody tr:nth-of-type(even) {
 }
 
 .disp{
-    margin: 15px auto;
-    margin-left: 16.6%;
-    padding: 3px 20px;
-       background-color: #E3F2FD;      /* Match table's even row */
+    margin-top: 30px;
+    float: left;
+    background-color: #E3F2FD;      /* Match table's even row */
     color: #125c99;
     width: 200px;
     border-radius: 10px;
@@ -119,7 +118,7 @@ table tbody tr:nth-of-type(even) {
 }
 .delbutt:hover{
     animation: ease-out 0.5s;
-    background-color: rgb(110, 10, 30);
+    background-color: rgb(153, 17, 44);
 }
 
 .editbutt{
@@ -156,31 +155,78 @@ table tbody tr:nth-of-type(even) {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
+    height: 100vh;
     background-color: rgba(0,0,0,0.4);
 }
         
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    width: 30%;
     border-radius: 5px;
 }
         
-.close{
-    color: aqua;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #c8d7e2;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.form-buttons button,
+.form-buttons input[type="submit"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
-    
-.close:hover{
-    color:black;
+
+.form-buttons button {
+    background-color: crimson;
+    color: white;
 }
+
+.form-buttons button:hover {
+    background-color: rgb(153, 17, 44);
+}
+
+.form-buttons input[type="submit"] {
+    background-color: #43a146;
+    cursor: pointer;
+    color: white;
+}
+
+.form-buttons input[type="submit"]:hover {
+    background-color: #359238;
+    cursor: pointer;
+}
+
+
 
 .form-group {
     margin-bottom: 15px;
@@ -196,15 +242,7 @@ table tbody tr:nth-of-type(even) {
     padding: 8px;
     box-sizing: border-box;
 }
-        
-.submit-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    
 
 
 
@@ -246,7 +284,7 @@ table tbody tr:nth-of-type(even) {
 }
 
 .delete-btn:hover {
-    background-color: rgb(110, 10, 30);
+    background-color: rgb(153, 17, 44);
 }
 
 .cancel-btn {

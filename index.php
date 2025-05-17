@@ -84,11 +84,13 @@
         $display = mysqli_query($conn, "SELECT COUNT(*) FROM student ");
         $mess = mysqli_fetch_array($display);  ?>
         <div class="disp"><p ><?php echo $mess[0]," Total Students"?></p></div>
-  
+    </center>
+    </section>
+    
     <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEditModal()" title="Close">&times;</span>
-            <h2>Edit Student Record</h2>
+            <center><h2>Edit Student Record</h2></center>
             <form id="editForm" action="edit.php" method="post">
                 <input type="hidden" name="studentnum" id="modalStudentNum">
                 
@@ -116,8 +118,10 @@
                     <label>Birthdate:</label>
                     <input type="date" id="modalBday" name="bday" required>
                 </div>
-                
-                <button type="submit" class="submit-btn">Save Changes</button>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeEditModal()" title="Close">Back</button>
+                    <input type="submit" class="submit-btn" value="Save Changes">
+                </div>
             </form>
         </div>
     </div>
