@@ -9,17 +9,32 @@
     font-family: "Roboto";
     src: url(Fonts/Roboto-Regular.ttf) format('truetype');
 }
-
+    @font-face {
+    font-family: "Bold";
+    src: url(Fonts/THEBOLDFONT-FREEVERSION.ttf) format('truetype');
+}
 *{
     font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Bold', sans-serif;
+    color: #000;
+    font-size:70px
 }
 </style>
 
 <?php $conn = mysqli_connect("localhost", "root", "", "student"); ?>
 <body>
     <center>
-        <a href="form.php">+Add </a>
+    <section>
+        <div class="header">
+            <div class="item1"><a href="form.php"  class="add">+Add </a></div>
+            <div class="item2"><center><h1>Student Records</h1></center></div>
+
+        </div>
         <table  width="80%" style="border-collapse:collapse;">
+            <thead>
+                
             <tr class="tableheader">
                 <th>Student Number</th>
                 <th>First Name</th>
@@ -30,6 +45,8 @@
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
             </tr>
+            </thead>
+        
             <?php
     $result = mysqli_query($conn, "SELECT * FROM student ORDER BY lname ASC");
     while($row = mysqli_fetch_array($result)) {
