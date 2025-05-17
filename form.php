@@ -21,22 +21,22 @@
                 <h2>Student Form </h2>
                 <form method="post" action="form_act.php">
                     <label>Student Number </label>
-                    <input type="text" name="studentnum"><br>
+                    <input type="text" name="studentnum" required><br>
 
                     <label>First Name</label>
-                    <input type="text" name="fname"><br>
+                    <input type="text" name="fname" required><br>
 
                     <label>Last Name</label>
-                    <input type="text" name="lname"><br>
+                    <input type="text" name="lname" required><br>
 
                     <label>Course</label>
-                    <input type="text" name="course"><br>
+                    <input type="text" name="course" required><br>
 
                     <label>Email</label>
-                    <input type="email" name="email"><br>
+                    <input type="email" name="email" required><br>
 
                     <label>Birthdate</label>
-                    <input type="date" name="bday"><br>
+                    <input type="date" name="bday" required><br>
 
                     <div class="form-buttons">
                         <button type="button" onclick="history.back()">Back</button>

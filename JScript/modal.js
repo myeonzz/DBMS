@@ -12,9 +12,3 @@ function closeEditModal() {
     document.getElementById('editModal').style.display = 'none';
 }
         
-window.onclick = function(event) {
-    var modal = document.getElementById('editModal');
-    if (event.target == modal) {
-        closeEditModal();
-    }
-}

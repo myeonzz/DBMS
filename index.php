@@ -21,7 +21,7 @@
         <a href="form.php">+Add </a>
         <table  width="80%" style="border-collapse:collapse;">
             <tr class="tableheader">
-                <th>Student Name</th>
+                <th>Student Number</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Course Name</th>
@@ -68,27 +68,27 @@
                 <input type="hidden" name="studentnum" id="modalStudentNum">
                 
                 <div class="form-group">
-                    <label for="modalFname">First Name:</label>
+                    <label>First Name:</label>
                     <input type="text" id="modalFname" name="fname" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="modalLname">Last Name:</label>
+                    <label>Last Name:</label>
                     <input type="text" id="modalLname" name="lname" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="modalCourse">Course:</label>
+                    <label>Course:</label>
                     <input type="text" id="modalCourse" name="course" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="modalEmail">Email:</label>
+                    <label>Email:</label>
                     <input type="email" id="modalEmail" name="email" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="modalBday">Birthdate:</label>
+                    <label>Birthdate:</label>
                     <input type="date" id="modalBday" name="bday" required>
                 </div>
                 

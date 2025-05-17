@@ -108,14 +108,18 @@ table tbody tr:nth-of-type(even) {
     border-radius: 5px;
 }
         
-.close {
-    color: #aaa;
+.close{
+    color: aqua;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
-        
+    
+.close:hover{
+    color:black;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
