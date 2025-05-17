@@ -286,7 +286,7 @@ table tbody tr:nth-of-type(even) {
 
 
         
-/* Notification styling */
+/* Notifications POPUP ONLI */
 .notification {
     position: fixed;
     top: 20px;
