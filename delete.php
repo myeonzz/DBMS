@@ -3,10 +3,8 @@ $conn = mysqli_connect("localhost", "root", "", "student");
 $studentnum = $_GET['studentnum'];
 
 mysqli_query($conn, "DELETE FROM student WHERE studentnum='$studentnum'");
+mysqli_close($conn);
 ?>
 <script>
-    alert("Record Deleted");
-    window.location="index.php";
-    </script>
-<?php
-mysqli_close($conn);
+    window.location.href = "index.php?deleted=true";
+</script>

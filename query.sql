@@ -1,1 +1,1 @@
-SELECT * FROM student;
+INSERT INTO 

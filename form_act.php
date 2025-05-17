@@ -19,6 +19,5 @@ mysqli_query($conn, "insert into student values(
 ?>
 
 <script>
-    alert("New Record Added");
-    window.location="index.php";
+    window.location.href = "index.php?added=true";
 </script>

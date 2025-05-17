@@ -22,8 +22,7 @@ mysqli_query($conn, $query);
 ?>
 
 <script>
-    alert("Record Updated Successfully");
-    window.location = "index.php";
+    window.location.href = "index.php?edit=true";
 </script>
 <?php
 mysqli_close($conn);
