@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../R/a.jpg');
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    height: 600px;
+    width: 900px;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.left{
+    width: 50%;
+    border-radius: 25px 0 0 25px;
+    background-image: url('../R/b.jpg');
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 25px 25px 0;
+}
+
+.right h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #c7eaff;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.form-buttons button,
+.form-buttons input[type="submit"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons button {
+    background-color: #8dadd8;
+    color: white;
+}
+
+.form-buttons button:hover {
+    background-color: #a2c1ec;
+}
+
+.form-buttons input[type="submit"] {
+    background-color: #7496ba;
+    color: white;
+}
+
+.form-buttons input[type="submit"]:hover {
+    background-color: #a2c1ec;
+}
