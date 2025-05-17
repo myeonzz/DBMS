@@ -80,15 +80,11 @@
     }
     ?>
     </table>
-    </center>
-    <div>
-        <div id="popup" >
-
-        </div>
-    </div>
-
-
-
+    <?php
+        $display = mysqli_query($conn, "SELECT COUNT(*) FROM student ");
+        $mess = mysqli_fetch_array($display);  ?>
+        <div class="disp"><p ><?php echo $mess[0]," Total Students"?></p></div>
+  
     <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEditModal()" title="Close">&times;</span>
